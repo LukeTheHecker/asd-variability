@@ -5,7 +5,7 @@
 # Code basis for: "Altered EEG Variability on Different Time Scales in Participants with Autism Spectrum Disorder - An Exploratory Study"
 This repository showcases the code used for the analyses presented in the paper **"Altered EEG Variability on Different Time Scales in Participants with Autism Spectrum Disorder - An Exploratory Study"** which is currently under review in *Nature Scientific Reports*. 
 
-The data used for in this work can not be shared.
+The data itself can not be shared, unfortunately. 
 
 ## Get started
 
