@@ -1,4 +1,4 @@
-# :rotating_light: This repository is under construction and will be complete upon publication of the manuscript :rotating_light:
+# :rotating_light: This repository is under construction and will be complete upon acceptance of the manuscript :rotating_light:
 
 ---
 
