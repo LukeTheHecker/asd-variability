@@ -14,7 +14,7 @@ from sklearn.model_selection import LeaveOneOut
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from skopt import BayesSearchCV
-
+from pathlib import Path
 
 
 from sklearn.model_selection import StratifiedShuffleSplit
@@ -87,11 +87,19 @@ def gof(f, x, y, popt):
     r_square = 1 - (SS_res / SS_tot)
     return r_square
 
+def check_mkdir(path):
+    dirname = os.path.dirname(path)
+    if not os.path.isdir(dirname):
+        Path(dirname).mkdir(parents=True, exist_ok=True)
 
 def custom_logger(logger_name, level=logging.DEBUG):
     """
     Method to return a custom logger with the given name and level
     """
+
+    check_mkdir(logger_name)
+    
+
     logger = logging.getLogger(logger_name)
     logger.setLevel(level)
     format_string = ("%(asctime)s — %(levelname)s: "
@@ -635,4 +643,5 @@ def smooth_image(img, n=5):
             span_j = [np.clip(j-n, a_min=lower, a_max=img_shape[1]), np.clip(j+n, a_min=lower, a_max=img_shape[1])]
             img_smooth[i, j] = np.mean(img[span_i[0]:span_i[1], span_j[0]:span_j[1]])
     return img_smooth
+
 
